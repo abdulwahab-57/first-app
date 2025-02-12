@@ -19,7 +19,7 @@ jobs:
       run: docker build -t f219457/first-app:latest .
 
     - name: Tag the image
-      run: docker tag first-app:latest ${{ secrets.DOCKERHUB_USERNAME }}/first-app:latest
+      run: docker tag f219457/first-app:latest ${{ secrets.DOCKERHUB_USERNAME }}/first-app:latest
 
     - name: Push the image
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/first-app:latest
